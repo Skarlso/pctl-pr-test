@@ -1,0 +1,12 @@
+apiVersion: source.toolkit.fluxcd.io/v1beta1
+kind: GitRepository
+metadata:
+  creationTimestamp: null
+  name: pctl-profile-nginx-profile-main
+  namespace: default
+spec:
+  interval: 0s
+  ref:
+    branch: main
+  url: https://github.com/weaveworks/nginx-profile
+status: {}

@@ -1,0 +1,17 @@
+apiVersion: helm.toolkit.fluxcd.io/v2beta1
+kind: HelmRelease
+metadata:
+  creationTimestamp: null
+  name: pctl-profile-nginx-dokuwiki
+  namespace: default
+spec:
+  chart:
+    spec:
+      chart: dokuwiki
+      sourceRef:
+        kind: HelmRepository
+        name: pctl-profile-nginx-profile-main-dokuwiki
+        namespace: default
+      version: 11.1.6
+  interval: 0s
+status: {}
