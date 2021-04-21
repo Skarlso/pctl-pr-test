@@ -102,6 +102,10 @@ func CreatePullRequest(repo string, base string, branch string, g git.Git) error
 		return fmt.Errorf("directory is not a git repository: %w", err)
 	}
 
+	if err := g.CreateBranch(); err != nil {
+		return fmt.Errorf("failed to create branch %s: %w", branch, err)
+	}
+
 	if err := g.Add(); err != nil {
 		return fmt.Errorf("failed to add changes: %w", err)
 	}
