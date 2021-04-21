@@ -1,0 +1,10 @@
+apiVersion: weave.works/v1alpha1
+kind: ProfileSubscription
+metadata:
+  creationTimestamp: null
+  name: pctl-profile
+  namespace: default
+spec:
+  branch: test02
+  profileURL: https://github.com/weaveworks/nginx-profile
+status: {}
