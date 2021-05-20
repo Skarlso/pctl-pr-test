@@ -1,0 +1,12 @@
+apiVersion: source.toolkit.fluxcd.io/v1beta1
+kind: GitRepository
+metadata:
+  creationTimestamp: null
+  name: pctl-profile-profiles-examples-v0.0.1
+  namespace: default
+spec:
+  interval: 0s
+  ref:
+    tag: bitnami-nginx/v0.0.1
+  url: https://github.com/weaveworks/profiles-examples
+status: {}
